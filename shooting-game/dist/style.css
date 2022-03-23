@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+  font-family: arial;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gunarea {
+  position: absolute;
+  right: 0;
+  width: 33%;
+  top: 0;
+  background-color: #fafafa;
+  height: 100%;
+  z-index: -1;
+}
+
+.gun {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  height: 10px;
+  width: 70px;
+  background-color: gray;
+  border-radius: 2px 2px 0px 0px;
+  box-shadow: none;
+  transition: box-shadow 1s linear;
+}
+.gun:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  height: 3px;
+  width: 2px;
+  background-color: black;
+  top: -3px;
+}
+
+.grip {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  height: 30px;
+  width: 20px;
+  background-color: black;
+  border-radius: 0px 0px 5px 5px;
+}
+.grip:after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  background-color: white;
+  height: 20px;
+  width: 16px;
+  border-radius: 108px 27px 44px 212px;
+}
+
+.underbarrel {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  height: 5px;
+  width: calc(100% - 20px);
+  background-color: black;
+  border-radius: 0px 0px 0px 2px;
+}
+
+.trigger {
+  position: absolute;
+  right: 18px;
+  width: 20px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid black;
+  top: 13px;
+  border-radius: 0px 0px 0px 10px;
+}
+.trigger:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 0px;
+  right: 5px;
+  width: 2px;
+  height: 7px;
+}
+
+.gunmag {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  right: 8px;
+  top: 10px;
+  border-radius: 0px 0px 4px 4px;
+  background-color: black;
+  transition: top 2s linear;
+}
+
+.bullet {
+  position: absolute;
+  height: 5px;
+  width: 10px;
+  background-color: black;
+  border-radius: 100% 0px 0px 100%;
+  z-index: -1;
+  transition: all 1s linear;
+}
+
+.target {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+}
+.target:after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 2px;
+  background-color: red;
+}
+.target:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: red;
+}
+
+.targetBoss {
+  border: 2px solid black !important;
+}
+
+.mag {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: auto;
+  min-height: 120px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.magBullet {
+  height: 10px;
+  width: calc(100% - 2px);
+  background-color: black;
+  margin: 1px;
+}
+
+.loadingMag {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  font-size: 30px;
+  z-index: 5;
+}
+
+.gameLose {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+.gameLose > p {
+  font-size: 30px;
+}
+.gameLose > button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px 1px grey;
+}
+
+#levelText {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+#pointsText {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.details {
+  position: absolute;
+  right: 35%;
+  width: 100px;
+  top: 20%;
+}
+
+.rocketsBtnContainer {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 3px gray;
+  border: unset;
+  transition: box-shadow 100ms linear;
+  outline: none;
+  cursor: pointer;
+}
+.rocketsBtnContainer:active {
+  box-shadow: 0 0 5px 1px gray;
+}
+
+.rocketNumber {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.rocket {
+  position: absolute;
+  height: 30px;
+  width: 20px;
+  background: #f5f5f5;
+  box-shadow: 0 3px 10px 1px gray;
+  transition: all 1s linear;
+  transform: rotate(-60deg);
+}
+.rocket:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: 0px;
+  width: 0px;
+  border-bottom: 10px solid red;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.rocket:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: -10px;
+  height: 0px;
+  width: 0px;
+  border-bottom: 20px solid white;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.rocketLabel {
+  transform: rotate(-45deg) translateY(4px);
+}

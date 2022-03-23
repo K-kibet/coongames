@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.app{
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.topbar{
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(41, 39, 39);
+    display: flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    left: 5px;
+    position: absolute;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.iconImage{
+    width: inherit;
+    height: inherit;
+}
+.pageLinks{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pageLink{
+    list-style: none;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.pageLink:hover{
+    cursor: pointer;
+    color: rgb(187, 183, 183);
+}
+
+.pageLinkActive{
+    color: rgb(33, 133, 33);
+}
+
+@media screen and (max-width:630px) {
+    .pageLinks{
+        display: none;
+    }
+}
+
+
+.user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    border: 2px solid rgb(33, 150, 33);
+    position: absolute;
+    right: 5px;
+}
+
+.user .userImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);    background: url("./unnamed.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flyer{
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+}
+
+
+.featuredImg{
+    margin: 10px 10px 0 0;
+    padding: 0;
+    width: 350px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .featuredImg img{
+    width: 350px;
+    border-radius: 50%;
+    
+}
+
+
+.flyer video{
+    width: 450px;
+}
+
+.modeBtn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imageGrid{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item{
+    min-width: 350px;
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.gameDesc{
+    width: 90%;
+    color: wheat;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .visitBtn{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+
+    background-color: rgba(12, 12, 12, 0.5);
+    color: rgb(242, 243, 242);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item a{
+    visibility: hidden;
+}
+
+.item img{
+    width: 98%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.usercard{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background: rgba(241, 239, 239, 0.2);
+    color: white;
+    position: relative;
+
+}
+ .userImg{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background-color: rgb(25, 97, 25);
+
+ }
+
+ .userImg img{
+     width: inherit;
+     height: inherit;
+     border-radius: inherit;
+ }
+ .userName{
+     width: 100%;
+     height: 20px;
+     font-size: 18px;
+     font-weight: 600;
+     text-align: center;
+
+ }
+
+
+
+.userDesc {
+    width: 100%;
+    padding-left: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   
+}
+
+.userDesc p{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.userContacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userCardEmail {
+    margin-right: 5px;
+}
+
+
+
+
+.userActions{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userActions a{
+    color: rgb(170, 170, 170);
+}
+
+
+
+
+
+    
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+  
+.wrapper {
+    width: 100%;
+   display: inline-flex;
+   align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.wrapper .icon {
+position: relative;
+background-color: #ffffff;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+width: 40px;
+height: 40px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background-color: #ffffff;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background-color: #ffffff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+background-color: #3b5999;
+color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+background-color: #46c1f6;
+color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+background-color: #e1306c;
+color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+background-color: #333333;
+color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+background-color: #de463b;
+color: #ffffff;
+}
+
+
+.Light{
+    background-color: white;
+    color: black;
+}
+
+.Dark{
+    background-color: white;
+    color: white;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Coongames - Shooting game</title>
+  <link rel="shortcut icon" href="./coongames.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='gun' id=gunId>
+  <div class='grip'></div>
+  <div class='underbarrel'></div>
+  <div class='trigger'></div>
+  <div class='gunmag' id='gunmagId'></div>
+</div>
+<div class='mag' id='magId'></div>
+<p id='levelText'>Level 1</p>
+<p id='pointsText'>0 Points</p>
+<div class='gameLose' id='gameLoseId'>
+  <p></p>
+  <button onclick='restartGame()'>Play!
+  </button>
+
+</div>
+<div class='details' id='detailsId'>Shoot from the gray area!</div>
+<div class='gunarea'></div>
+<button id='rocketsBtnId' class='rocketsBtnContainer' onclick='handleRocketClick(event)'>
+  <p class='rocketNumber' id='rocketsIdAmount'>0</p>
+  <div class='rocket rocketLabel'></div>
+</button>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

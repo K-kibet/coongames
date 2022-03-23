@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+}
+canvas {
+  background-color: #42a5f5;
+  max-width: 100%;
+}
+p{
+  height: 70px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+body{
+  background: url("./bg.png");
+}
