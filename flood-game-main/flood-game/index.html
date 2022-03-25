@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59020727-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-59020727-1');
+    </script>
+
+    <meta charset="UTF-8" content-type="text/html">
+    <title>Flood Game</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/helpers.js" type="text/javascript"></script>
+    <script src="js/tile.js" type="text/javascript"></script>
+    <script src="js/board.js" type="text/javascript"></script>
+    <script src="js/game.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </head>
+  <body style="background-color:lightblue">
+    <h1  style="margin-top:0%;"class="text-huge">Flood Game</h1><hr>
+    <div class="container">
+    <p class="text-small">Try to fill the grid with a single color before you run out of moves.</p>
+      <hr>
+	  <div id="main-menu-screen">
+        <ul class="nav padding-small">
+          <li class="padding-small"><button class="text-medium" id="new-game-btn">New Game</button></li>
+          <li class="padding-small"><button class="text-medium" id="options-btn">Options</button></li>
+        </ul>
+      </div>
+      <div id="options-menu">
+        <p class="clear text-small"><span class="align-left">Color Scheme</span><select class="align-right" id="color-scheme-options"></select></p>
+        <p class="clear text-small"><span class="align-left">Number of Colors</span><select class="align-right" id="number-of-colors-options"></select></p>
+        <p class="clear text-small"><span class="align-left">Grid Size</span><select class="align-right" id="size-options"></select>
+        </p>
+      </div>
+      <table id="board">
+      </table>
+      <div class="align-left padding-tiny" id="controls">
+      </div>
+      <div class="align-right padding-tiny text-large" id="counter">
+      </div>
+    </div>
+  </body>
+</html>

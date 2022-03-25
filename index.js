@@ -1,6 +1,7 @@
 const items = document.querySelectorAll('.item');
 const icon = document.querySelector(".icon");
 
+
 const popupEl = `
 <div class="login-wrap">
 <h2>Login</h2>
@@ -34,12 +35,12 @@ const modeBtn = document.querySelector('.modeBtn');
 
 const toggleMode = () =>{
     if(localStorage.getItem('mode') === "Dark"){
-        return  localStorage.setItem('mode', "Light")
-    }else return localStorage.setItem('mode',"Dark")
+          localStorage.setItem('mode', "Light")
+    }else  localStorage.setItem('mode',"Dark")
 }
 
-const setMode = () =>{  
-    toggleMode
+async function setMode(){  
+    await toggleMode
     app.forEach(el => {
         el.classList.toggle(localStorage.getItem('mode'))
         
@@ -49,3 +50,5 @@ const setMode = () =>{
 }
 
 modeBtn.onclick = setMode
+
+    
