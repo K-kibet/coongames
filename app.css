@@ -7,7 +7,7 @@
 
 .app{
     width: 100vw;
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,44 +26,30 @@
     justify-content: center;
 }
 
-.icon{
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    left: 5px;
-    position: absolute;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.iconImage{
-    width: inherit;
-    height: inherit;
-}
 .pageLinks{
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     align-items: center;
 
 }
 
 .pageLink{
     list-style: none;
-    font-size: 19px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 600;
-    margin: 10px;
+    margin: 8px;
     text-decoration: none;
 }
 
 .pageLink:hover{
     cursor: pointer;
-    color: rgb(187, 183, 183);
+    color: rgb(33, 133, 33);
 }
 
 .pageLinkActive{
@@ -141,16 +127,6 @@ main{
     width: 450px;
 }
 
-.modeBtn{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    font-weight: 600;
-}
-
 .content{
     width: 100vw;
     display: flex;
@@ -159,14 +135,19 @@ main{
     flex-direction: column;
 }
 
-.imageGrid{
+.gamesContainer{
     width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
+
 .item{
-    max-width: 350px;
+    width: 250px;
+    height: 280px;
     margin: 5px 5px 5px 5px;
     display: flex;
     align-items: center;
@@ -203,9 +184,10 @@ main{
 }
 
 .item img{
-    width: 98%;
+    width: 90%;
+    max-height: 250px;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .item:hover{
@@ -224,7 +206,7 @@ main{
 
 .usercard{
     width: 100%;
-    height: 280px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,25 +267,6 @@ main{
     margin-right: 5px;
 }
 
-
-
-
-.userActions{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.userActions a{
-    color: rgb(170, 170, 170);
-}
-
-
-
-
-
     
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
   
@@ -318,7 +281,7 @@ main{
 
 .wrapper .icon {
 position: relative;
-background-color: #ffffff;
+background-color: #7a7979;
 border-radius: 50%;
 padding: 15px;
 margin: 10px;
@@ -367,9 +330,13 @@ visibility: visible;
 pointer-events: auto;
 }
 
-.wrapper .icon:hover span,
+.wrapper .icon:hover a,
 .wrapper .icon:hover .tooltip {
 text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .icon a {
+    color: white;
 }
 
 .wrapper .facebook:hover,

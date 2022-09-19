@@ -1,5 +1,11 @@
 body {
+    width: 100vh;
+    height: 100vh;
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #gameGrid {
